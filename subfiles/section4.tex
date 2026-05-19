@@ -1,0 +1,35 @@
+%!TEX root = ../hbrs-poster.tex
+\documentclass[../hbrs-poster.tex]{subfiles}
+\begin{document}
+    \block{Discussion \& Conclusions}
+    {
+        \textbf{Key Findings}
+
+        \begin{itemize}
+            \item LLMs can reason about spatial layouts, sequence tool calls, and \textbf{recover from failures without explicit replanning logic}
+            \item Episodic memory provides modest improvements; benefits are limited by \textbf{hallucinated success labels} corrupting the memory store
+            \item Models misinterpret ambiguous instructions (e.g., attempting to grab a TV when told to ``put all objects away'')
+            \item Smaller models (${\sim}24$B parameters) cannot coherently chain actions; large frontier models are necessary
+        \end{itemize}
+
+        \vspace{0.8em}
+        \textbf{Limitations}
+
+        \begin{itemize}
+            \item \textbf{Overconfidence:} agents incorrectly believe they succeeded, impairing episodic memory quality
+            \item \textbf{Task refusal:} after completing one task, models sometimes hallucinate that a subsequent task is already done
+            \item \textbf{High latency} of cloud-hosted models (30--150\,s/request) limits real-robot reactivity
+            \item Evaluation is simulation-only; real-robot deployment not yet validated
+        \end{itemize}
+
+        \vspace{0.8em}
+        \textbf{Future Work}
+
+        \begin{itemize}
+            \item Couple episodic memory writes with an \textbf{external fact-checker} (human-in-the-loop or dedicated model) to eliminate hallucinated labels
+            \item Automated evaluation pipeline for broader task/model/platform benchmarking
+            \item Richer simulated environments (dynamic obstacles, multi-agent) and \textbf{physical robot deployment}
+            \item Systematic comparison with traditional cognitive architectures (SOAR, ACT-R, KnowRob)
+        \end{itemize}
+    }
+\end{document}

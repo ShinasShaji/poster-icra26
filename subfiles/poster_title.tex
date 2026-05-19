@@ -1,0 +1,32 @@
+%%%%% title %%%%%
+\title{\parbox{0.85\linewidth}{From Language to Action: Can LLM-Based Agents Be Used for Embodied Robot Cognition?}}
+\author{\parbox{0.85\linewidth}{
+Shinas Shaji$^{1,2}$, Fabian Huppertz$^{1}$, Alex Mitrevski$^{3}$, Sebastian Houben$^{1,2}$\\
+\hspace{1em}
+$^{1}$Hochschule Bonn-Rhein-Sieg \quad
+$^{2}$Fraunhofer IAIS \quad
+$^{3}$Chalmers University of Technology
+}}
+
+% format title
+\definetitlestyle{BrsuTitle}{linewidth = 0mm,
+                             innersep = 0pt,
+                             titletotopverticalspace = 2.5cm,
+                             titletoblockverticalspace = 0cm
+}{
+    \begin{scope}[line width=0pt]
+        \draw[color=blocktitlebgcolor, fill=titlebgcolor]
+        (\titleposleft,\titleposbottom) rectangle (\titleposright,\titlepostop);
+    \end{scope}
+}
+\usetitlestyle{BrsuTitle}
+
+\settitle
+{
+    \vbox
+    {
+        \color{titlefgcolor} {\bfseries \Huge \sc \textbf{\@title} \par}
+        \vspace*{1em}
+        {\LARGE \@author \par}
+	}
+}

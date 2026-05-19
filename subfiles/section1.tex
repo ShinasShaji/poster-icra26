@@ -1,0 +1,33 @@
+%!TEX root = ../hbrs-poster.tex
+\documentclass[../hbrs-poster.tex]{subfiles}
+\begin{document}
+    \block{Introduction}
+    {
+        \textbf{\large Motivation}
+
+        \begin{itemize}
+            \item Robots in everyday environments need \textbf{task planning, execution monitoring, and failure recovery}
+            \item Traditional cognitive architectures require extensive engineered knowledge and many dedicated components
+            \item LLMs exhibit emergent capabilities in reasoning, language understanding, and task execution
+        \end{itemize}
+
+        \vspace{0.5em}
+        \textbf{\large Research Question}
+
+        \vspace{0.3em}
+        Can an LLM (used \emph{zero-shot}) serve as the cognitive core of an embodied robot in a 3D household environment?
+
+        \vspace{0.8em}
+        \textbf{\large Contributions}
+
+        \begin{enumerate}
+            \item \textbf{Cognitive architecture} embedding an agentic LLM with episodic memory, working memory, and a tool-calling interface for navigation and manipulation
+            \item \textbf{Empirical evaluation} on two household tasks across four LLMs (GPT-4.1, Claude 4 Sonnet, Qwen3 Coder 480B, DeepSeek V3.1)
+        \end{enumerate}
+
+        \vspace{0.8em}
+        \begin{tikzfigure}[System overview]
+            \includegraphics[width=0.4\linewidth]{figures/graphical_abstract.png}
+        \end{tikzfigure}
+    }
+\end{document}

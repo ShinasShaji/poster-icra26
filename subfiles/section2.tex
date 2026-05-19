@@ -1,0 +1,41 @@
+%!TEX root = ../hbrs-poster.tex
+\documentclass[../hbrs-poster.tex]{subfiles}
+\begin{document}
+    \block{System Architecture}
+    {
+        \begin{wrapfigure}{r}{18cm}
+            \vspace{-0.5cm}
+            \begin{tikzfigure}
+                \includegraphics[width=17cm]{figures/environment.png}
+            \end{tikzfigure}
+            \vspace{-0.3cm}
+            \small\centering Simulated household environment (kitchen + living room) and robot
+        \end{wrapfigure}
+
+        The robot is embodied as a \textbf{mobile manipulator} (omnidirectional base + 7-DOF arm) operating in a PyBullet-simulated household environment with a kitchen, living room, and hallway.
+
+        \vspace{0.8em}
+        \textbf{Memory Architecture}
+
+        \begin{itemize}
+            \item \textbf{Working memory:} LLM context + scratchpad for immediate task reasoning and planning
+            \item \textbf{Episodic memory:} ChromaDB vector store of past execution summaries, semantically searchable for relevant prior experiences
+        \end{itemize}
+
+        \vspace{0.8em}
+        \textbf{Tools (callable actions for the LLM)}
+
+        \begin{itemize}
+            \item \texttt{Look-Around} --- perceive nearby objects and current location
+            \item \texttt{Move-To} --- navigate to a semantic map location via A*
+            \item \texttt{Grab} --- attach object to end-effector (if within reach)
+            \item \texttt{Place} --- release held object at a target location
+            \item \texttt{Add-To-Scratchpad} / \texttt{View-Scratchpad} --- plan and reason
+            \item \texttt{Search-Memory} --- retrieve relevant past experiences
+            \item \texttt{End-Task} --- report task outcome; result saved to episodic memory
+        \end{itemize}
+
+        \vspace{0.5em}
+        Chain-of-thought prompting \cite{wei2022} elicits reasoning; replanning emerges naturally from LLM inference without explicit enforcement.
+    }
+\end{document}
