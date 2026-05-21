@@ -3,21 +3,30 @@
 \begin{document}
     \block{Introduction}
     {
+        \vspace{0.4cm}
+        \begin{wrapfigure}{r}{25cm}
+            \centering
+            \includegraphics[width=23.0cm]{figures/graphical_abstract.png}
+            \vspace{0.3em}
+            {\\ \small Fig. 1: System overview}
+        \end{wrapfigure}
+
         \textbf{\large Motivation}
 
         \begin{itemize}
             \item Robots in everyday environments need \textbf{task planning, execution monitoring, and failure recovery}
-            \item Traditional cognitive architectures require extensive engineered knowledge and many dedicated components
-            \item LLMs exhibit emergent capabilities in reasoning, language understanding, and task execution
+            \item Traditional cognitive architectures \cite{kotseruba2018,corobook} require extensive engineered knowledge and many dedicated components
+            \item LLMs exhibit emergent capabilities in reasoning, language understanding, and task execution \cite{liang2023,wangj2024}
+            \item Prior LLM-robot work \cite{manling2024,monwilliams2025} relies on symbolic world representations or code generation; we investigate zero-shot tool-calling
         \end{itemize}
 
-        \vspace{0.5em}
+        \vspace{1cm}
         \textbf{\large Research Question}
 
         \vspace{0.3em}
         Can an LLM (used \emph{zero-shot}) serve as the cognitive core of an embodied robot in a 3D household environment?
 
-        \vspace{0.8em}
+        \vspace{1cm}
         \textbf{\large Contributions}
 
         \begin{enumerate}
@@ -25,9 +34,6 @@
             \item \textbf{Empirical evaluation} on two household tasks across four LLMs (GPT-4.1, Claude 4 Sonnet, Qwen3 Coder 480B, DeepSeek V3.1)
         \end{enumerate}
 
-        \vspace{0.8em}
-        \begin{tikzfigure}[System overview]
-            \includegraphics[width=0.4\linewidth]{figures/graphical_abstract.png}
-        \end{tikzfigure}
+        \vspace{2.4em}
     }
 \end{document}

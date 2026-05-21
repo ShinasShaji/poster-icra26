@@ -1,4 +1,4 @@
-\documentclass[25pt,
+\documentclass[20pt,
                a0paper,
                landscape,
                portraitmargin = 0mm,
@@ -21,7 +21,7 @@
 \input{subfiles/poster_title}
 
 \begin{document}
-    \maketitle[width=0.88\textwidth]
+    \maketitle[width=0.9\textwidth]
     \input{subfiles/layout}
 
     \begin{columns}
@@ -30,35 +30,62 @@
 
         \column{0.5}
         \subfile{subfiles/section3}
+        
     \end{columns}
 
     \begin{columns}
         \column{0.5}
         \subfile{subfiles/section2}
-
+        
+        
         \column{0.5}
         \subfile{subfiles/section4}
+        
     \end{columns}
-
-    \block{References}
-    {
-        \small
-        \begingroup
-            \nocite{*}
-            \renewcommand\refname{\vskip -2cm}
-            \bibliography{references}
-            \bibliographystyle{unsrt}
-        \endgroup
-    }
 
     \begin{columns}
-        \column{0.5}
-        \subfile{subfiles/acknowledgements}
+        \column{0.75}
+        \block{References}
+        {
+            \small
+            \begingroup
+                % \nocite{*}
+                \renewcommand\refname{\vskip -2cm}
+                \bibliography{references}
+                \bibliographystyle{unsrt}
+            \endgroup
+        }
 
-        \column{0.5}
-        \subfile{subfiles/contact}
-
+        \column{0.25}
+        \block{Scan to Explore}
+        {
+            \centering
+            \begin{minipage}{0.45\linewidth}
+                \centering
+                \begin{tikzfigure}
+                    \includegraphics[width=5.5cm]{figures/qrcode_paper.png}
+                \end{tikzfigure}
+                \small Paper Page
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\linewidth}
+                \centering
+                \begin{tikzfigure}
+                    \includegraphics[width=5.5cm]{figures/qrcode_code.png}
+                \end{tikzfigure}
+                \small GitHub Repository
+            \end{minipage}
+        }
     \end{columns}
+
+    % \begin{columns}
+    %     \column{0.5}
+    %     \subfile{subfiles/contact}
+
+    %     \column{0.5}
+    %     \subfile{subfiles/acknowledgements}
+
+    % \end{columns}
 
     \subfile{subfiles/footer}
 \end{document}
