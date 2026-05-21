@@ -44,7 +44,7 @@
     \end{columns}
 
     \begin{columns}
-        \column{0.75}
+        \column{0.5}
         \block{References}
         {
             \small
@@ -54,38 +54,10 @@
                 \bibliography{references}
                 \bibliographystyle{unsrt}
             \endgroup
-        }
-
-        \column{0.25}
-        \block{Scan to Explore}
-        {
-            \centering
-            \begin{minipage}{0.45\linewidth}
-                \centering
-                \begin{tikzfigure}
-                    \includegraphics[width=5.5cm]{figures/qrcode_paper.png}
-                \end{tikzfigure}
-                \small Paper Page
-            \end{minipage}
-            \hfill
-            \begin{minipage}{0.45\linewidth}
-                \centering
-                \begin{tikzfigure}
-                    \includegraphics[width=5.5cm]{figures/qrcode_code.png}
-                \end{tikzfigure}
-                \small GitHub Repository
-            \end{minipage}
-        }
+        }%
+        \column{0.5}
+        \subfile{subfiles/contact}
     \end{columns}
-
-    % \begin{columns}
-    %     \column{0.5}
-    %     \subfile{subfiles/contact}
-
-    %     \column{0.5}
-    %     \subfile{subfiles/acknowledgements}
-
-    % \end{columns}
 
     \subfile{subfiles/footer}
 \end{document}
